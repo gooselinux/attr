@@ -1,0 +1,13 @@
+diff --git a/include/buildmacros b/include/buildmacros
+index ab89182..17423c0 100644
+--- a/include/buildmacros
++++ b/include/buildmacros
+@@ -88,8 +88,6 @@ INSTALL_LTLIB_DEV = \
+ 	../$(INSTALL) -m 755 -d $(PKG_LIB_DIR); \
+ 	../$(INSTALL) -T so_base $(LIBNAME).lai $(PKG_LIB_DIR); \
+ 	if test "x$(PKG_DEVLIB_DIR)" != "x$(PKG_LIB_DIR)" ; then \
+-	../$(INSTALL) -S $(PKG_DEVLIB_DIR)/$(LIBNAME).a $(PKG_LIB_DIR)/$(LIBNAME).a; \
+-	../$(INSTALL) -S $(PKG_DEVLIB_DIR)/$(LIBNAME).la $(PKG_LIB_DIR)/$(LIBNAME).la; \
+ 	../$(INSTALL) -S $(PKG_LIB_DIR)/$(LIBNAME).so $(PKG_DEVLIB_DIR)/$(LIBNAME).so; \
+ 	fi
+ else
